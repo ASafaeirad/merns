@@ -5,8 +5,7 @@ node_modules/
 coverage/
 
 # production
-/build
-/dist
+dist/
 
 # dev tools
 /.idea
