@@ -1,0 +1,20 @@
+{
+  "name": "merns",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "compile": "lerna run compile",
+    "clean": "lerna run clean",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "update-version": "lerna publish --skip-git --skip-npm --force-publish '*'",
+    "check-packages": "yarn clean && yarn compile && yarn test && yarn lint"
+  },
+  "workspaces": [
+    "packages/*",
+    "libs/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.3.1"
+  }
+}
