@@ -15,6 +15,9 @@
     "libs/*"
   ],
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
     "lerna": "^3.3.1"
   }
 }
