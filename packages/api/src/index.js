@@ -1,8 +1,5 @@
-import http from 'http';
-import { app } from './app';
+import { server } from './app';
 
-const server = http.createServer(app);
-
-server.listen('3000', () => {
-  console.log('Api is running on port 3000');
+server.listen().then(({ url }) => {
+  console.log(`🚀  Server ready at ${url}`);
 });

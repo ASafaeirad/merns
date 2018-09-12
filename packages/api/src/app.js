@@ -1,5 +1,31 @@
-import express from 'express';
+const { ApolloServer, gql } = require('apollo-server');
 
-export const app = express();
+const books = [
+  {
+    title: 'Harry Potter and the Chamber of Secrets',
+    author: 'J.K. Rowling',
+  },
+  {
+    title: 'Jurassic Park',
+    author: 'Michael Crichton',
+  },
+];
 
-app.get('/', (req, res) => res.json('OK'));
+const typeDefs = gql`
+  type Book {
+    title: String
+    author: String
+  }
+
+  type Query {
+    books: [Book]
+  }
+`;
+
+const resolvers = {
+  Query: {
+    books: () => books,
+  },
+};
+
+export const server = new ApolloServer({ typeDefs, resolvers });
