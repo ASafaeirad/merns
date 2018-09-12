@@ -2,6 +2,10 @@
   "name": "@fem/steps",
   "version": "0.0.1",
   "license": "MIT",
+  "author": {
+    "name": "frontendmonster",
+    "email": "frontendmonster@gmail.com"
+  },
   "main": "index.js",
   "scripts": {
     "test": "jest"
