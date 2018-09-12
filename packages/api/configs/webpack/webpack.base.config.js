@@ -20,6 +20,7 @@ const config = {
   module: {
     rules: [
       { test: /\.js?$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { test: /\.graphql$/, exclude: /node_modules/, loader: 'raw-loader' },
     ],
   },
   plugins: [

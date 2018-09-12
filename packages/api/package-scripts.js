@@ -17,7 +17,7 @@ module.exports = {
     build: `${envs.prod()} webpack`,
 
     test: {
-      default: `${envs.test()} jest --config ./configs/jest.config.js --runInBand`,
+      default: `${envs.test()} jest --runInBand`,
       watch: series.nps('test --watch'),
       cover: series.nps('test --coverage'),
     },
