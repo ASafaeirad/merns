@@ -1,0 +1,7 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["@merns/eslint-config"],
+  "env": {
+    "browser": true
+  }
+}

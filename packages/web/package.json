@@ -1,0 +1,13 @@
+{
+  "name": "@merns/web",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@merns/common": "0.0.0"
+  },
+  "devDependencies": {
+    "@merns/eslint-config": "*",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.5.0"
+  }
+}
