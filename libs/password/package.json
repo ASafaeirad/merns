@@ -1,0 +1,12 @@
+{
+  "name": "@fem/password",
+  "author": {
+    "name": "frontendmonster",
+    "email": "frontendmonster@gmail.com"
+  },
+  "version": "0.0.1",
+  "main": "index.js",
+  "peerDependencies": {
+    "bcryptjs": "^2.4.3"
+  }
+}
