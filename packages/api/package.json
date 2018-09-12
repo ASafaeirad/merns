@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.1",
-    "@merns/eslint-config": "*",
+    "@fem/eslint-config": "*",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.2",
     "case-sensitive-paths-webpack-plugin": "^2.1.2",

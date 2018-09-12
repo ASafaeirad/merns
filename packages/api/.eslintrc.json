@@ -1,6 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": ["@merns/eslint-config"],
+  "extends": ["@fem/eslint-config"],
   "env": {
     "node": true
   }

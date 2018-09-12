@@ -4,5 +4,5 @@
     "browser": true,
     "node": true
   },
-  "extends": ["@merns/eslint-config"]
+  "extends": ["@fem/eslint-config"]
 }
