@@ -1,5 +1,4 @@
-import { createResolver } from 'apollo-resolvers';
-import { isAuthenticatedResolver } from '../alc.resovler';
+import { createResolver, isAuthenticatedResolver } from '@fem/graphql-tools';
 import * as userController from './user.controller';
 
 const allUsers = createResolver(userController.allUsers);

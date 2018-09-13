@@ -1,4 +1,3 @@
-import { ApolloServer } from 'apollo-server';
-import { typeDefs, resolvers, context } from './graphql';
+import express from 'express';
 
-export const server = new ApolloServer({ typeDefs, resolvers, context });
+export const app = express();
