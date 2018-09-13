@@ -14,7 +14,7 @@ module.exports = {
 
     dev: `${envs.dev()} webpack`,
 
-    build: `${envs.prod()} webpack`,
+    build: series('nps clean', `${envs.prod()} webpack`),
 
     test: {
       default: `${envs.test()} jest --runInBand`,

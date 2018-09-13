@@ -1,4 +1,4 @@
-import * as models from '../models';
+import { models } from '@merns/dal';
 import { authResolvers, authTypes } from './auth';
 import { userResolvers, userTypes } from './user';
 
