@@ -3,16 +3,24 @@ import { logger } from './dal-logger';
 
 let client = null;
 
-export const getClient = () => client;
+export const getRedisInstance = () => {
+  if (!client) {
+    throw new Error('Try to get redis client before create it');
+  }
 
-export const createClient = (redisConnectionUri) => {
+  return client;
+};
+
+export const createRedisInstance = (redisConnectionUri) => {
   client = new Redis(redisConnectionUri);
 
   client.on('connect', () => {
-    logger.server.success('Redis connected to: ', redisConnectionUri);
+    logger.success('Redis connected to: ', redisConnectionUri);
   });
 
   return client;
 };
 
-export const flushRedis = async () => client && client.flushall();
+export const flushRedis = async () => {
+  getRedisInstance().flushall();
+};
