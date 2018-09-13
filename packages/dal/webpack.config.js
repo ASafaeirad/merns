@@ -7,7 +7,7 @@ const config = {
   devtool: 'source-map',
   target: 'node',
   mode: 'production',
-  entry: './src',
+  entry: './index.js',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: `${libName}.bundle.js`,
