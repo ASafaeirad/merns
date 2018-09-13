@@ -1,3 +1,3 @@
-import Logger from '@fem/logger';
+import { Signale } from '@fem/logger';
 
-export const apiLogger = Logger('api');
+export const logger = Signale('api');
