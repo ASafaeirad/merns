@@ -1,5 +1,5 @@
 import clear from '@fem/clear';
-import { startServer } from './server';
+import { startServer } from './src/server';
 
 clear();
 startServer();
