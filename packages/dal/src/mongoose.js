@@ -2,6 +2,9 @@ import mongoose from 'mongoose';
 import { logger } from './dal-logger';
 
 mongoose.Promise = global.Promise;
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 
 export const MongooseClient = (function MongooseClinet() {
   let client = null;
@@ -19,7 +22,7 @@ export const MongooseClient = (function MongooseClinet() {
     }
 
     try {
-      await mongoose.connect(dbConnectionUri, { useNewUrlParser: true });
+      await mongoose.connect(dbConnectionUri);
       logger.success('Mongoose connected to: ', dbConnectionUri);
 
       mongoose.connection.on('error', (err) => {
