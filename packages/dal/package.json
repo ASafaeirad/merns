@@ -5,12 +5,14 @@
     "name": "frontendmonster",
     "email": "frontendmonster@gmail.com"
   },
+  "license": "MIT",
   "version": "0.0.1",
   "main": "./dist/dal.bundle.js",
   "scripts": {
     "clean": "rimraf dist",
     "lint": "eslint ./src --ext .js",
-    "build": "webpack"
+    "build": "webpack",
+    "build:watch": "webpack --watch"
   },
   "dependencies": {
     "@fem/logger": "*",

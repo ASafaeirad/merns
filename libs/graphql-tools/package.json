@@ -8,7 +8,8 @@
   },
   "main": "dist/graphql-tools.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "build:watch": "webpack --watch"
   },
   "dependencies": {
     "apollo-resolvers": "^1.4.1",
