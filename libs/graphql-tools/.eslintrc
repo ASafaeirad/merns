@@ -1,4 +1,7 @@
 {
   "parser": "babel-eslint",
-  "extends": ["@fem/eslint-config"]
+  "extends": ["@fem/eslint-config"],
+  "env": {
+    "browser": true
+  }
 }
