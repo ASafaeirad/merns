@@ -25,9 +25,9 @@ export class AlreadyAuthenticatedError extends ApolloError {
   }
 }
 
-export class UnAuthorizedError extends ApolloError {
+export class UnauthorizedError extends ApolloError {
   constructor(message) {
     super(message, 'UNAUTHORIZED');
-    Object.defineProperties(this, 'name', 'UnAuthorizedError');
+    Object.defineProperties(this, 'name', 'UnauthorizedError');
   }
 }

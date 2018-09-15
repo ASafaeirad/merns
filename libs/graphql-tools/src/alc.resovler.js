@@ -2,7 +2,7 @@ import { createResolver } from 'apollo-resolvers';
 
 import {
   AlreadyAuthenticatedError,
-  UnAuthorizedError,
+  UnauthorizedError,
   UnknownError,
   UserInputError,
 } from './graphql-errors';
@@ -21,7 +21,7 @@ export const isAuthenticatedResolver = baseResolver.createResolver(async (_, __,
   const user = await ctx.user;
 
   if (!user || !user.id) {
-    throw new UnAuthorizedError();
+    throw new UnauthorizedError();
   } else {
     ctx.user = user;
   }
