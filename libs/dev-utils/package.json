@@ -1,0 +1,12 @@
+{
+  "name": "@fem/dev-utils",
+  "author": {
+    "email": "frontendmonster@gmail.cm",
+    "name": "frontendmonster"
+  },
+  "version": "0.0.1",
+  "main": "index.js",
+  "devDependencies": {
+    "@fem/eslint-config": "*"
+  }
+}
