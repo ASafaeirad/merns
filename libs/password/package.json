@@ -8,8 +8,5 @@
   "main": "index.js",
   "dependencies": {
     "bcryptjs": "^2.4.3"
-  },
-  "peerDependencies": {
-    "bcryptjs": "^2.4.3"
   }
 }
