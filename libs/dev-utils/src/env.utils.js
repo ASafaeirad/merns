@@ -1,16 +1,22 @@
+const { crossEnv } = require('nps-utils');
+
 const ENVS = {
   prod: 'production',
   dev: 'development',
   test: 'test',
 };
 
-const env = () => process.env.NODE_ENV || ENVS.prod;
+const get = () => process.env.NODE_ENV;
+
+const set = _ => crossEnv(`NODE_ENV=${_}`);
 
 const envUtils = {
   ...ENVS,
-  isDev: ENVS.dev.includes(env),
-  isProd: ENVS.prod.includes(env),
-  isTest: ENVS.test.includes(env),
+  get,
+  set,
+  isDev: ENVS.dev.includes(get()),
+  isProd: ENVS.prod.includes(get()),
+  isTest: ENVS.test.includes(get()),
 };
 
 module.exports = envUtils;

@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const { HotModuleReplacementPlugin, NamedModulesPlugin } = require('webpack');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
@@ -9,8 +9,8 @@ const devConfig = {
   devtool: 'source-map',
   mode: 'development',
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
+    new HotModuleReplacementPlugin(),
+    new NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: 'index.html',
@@ -39,6 +39,7 @@ const devConfig = {
     compress: true,
     port: 3000,
     hot: true,
+    stats: 'errors-only',
   },
 };
 

@@ -3,27 +3,36 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "compile": "lerna run compile",
-    "clean": "lerna run clean",
-    "build": "lerna run build",
-    "build:watch": "lerna run build:watch --parallel",
-    "dev:core": "lerna run build:watch --parallel --scope @merns/*",
-    "dev:libs": "lerna run build:watch --parallel --scope @fem/*",
-    "dev": "yarn workspace @merns/api run dev",
-    "lint": "lerna run lint",
-    "test": "lerna run test",
-    "update-version": "lerna publish --skip-git --skip-npm --force-publish '*'",
-    "check-packages": "yarn clean && yarn compile && yarn test && yarn lint"
+    "clean": "nps clean",
+
+    "lint": "nps lint",
+    "lint:core": "nps lint.core",
+    "lint:libs": "nps lint.libs",
+
+    "build": "nps build",
+    "build:core": "nps build.core",
+    "build:libs": "nps build.libs",
+
+    "watch": "nps build.watch",
+    "watch:core": "nps watch.core",
+    "watch:libs": "nps watch.libs",
+
+    "dev": "nps dev",
+    "test": "nps test",
+    "check": "nps check"
   },
   "workspaces": [
     "packages/*",
     "libs/*"
   ],
   "devDependencies": {
+    "@fem/dev-utils": "*",
     "@babel/core": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.0.0",
-    "lerna": "^3.3.1"
+    "lerna": "^3.3.1",
+    "nps": "^5.9.3",
+    "nps-utils": "^1.7.0"
   }
 }

@@ -1,5 +1,8 @@
 {
   "extends": "../../.babelrc",
+  "presets": [
+    ["@babel/preset-react"]
+  ],
   "env": {
     "production": {
       "presets": [
