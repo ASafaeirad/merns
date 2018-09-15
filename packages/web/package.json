@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "clean": "nps clean",
     "dev": "nps dev",
     "test:watch": "nps test.watch",
     "test:cover": "nps test.cover",
@@ -19,6 +20,7 @@
     "@babel/core": "^7.0.1",
     "@babel/plugin-transform-react-constant-elements": "^7.0.0",
     "@babel/plugin-transform-react-inline-elements": "^7.0.0",
+    "@fem/dev-utils": "*",
     "@fem/eslint-config": "*",
     "@fem/logger": "*",
     "@fem/webpack-utils": "*",

@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const merge = require('webpack-merge');
+const webpackBaseConfig = require('./webpack.base.config');
 
-const config = {
+const prodConfig = {
   devtool: 'source-map',
   mode: 'production',
   plugins: [
@@ -22,5 +24,7 @@ const config = {
     }),
   ],
 };
+
+const config = merge(webpackBaseConfig, prodConfig);
 
 module.exports = config;

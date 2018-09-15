@@ -1,10 +1,5 @@
 const { rimraf, crossEnv, series } = require('nps-utils');
-
-const envs = {
-  dev: () => crossEnv('NODE_ENV=development'),
-  prod: () => crossEnv('NODE_ENV=production'),
-  test: () => crossEnv('NODE_ENV=test'),
-};
+const { env } = require('@fem/dev-utils');
 
 module.exports = {
   scripts: {
@@ -12,12 +7,12 @@ module.exports = {
 
     lint: 'eslint ./src --ext ".js, .jsx"',
 
-    dev: `${envs.dev()} webpack-dev-server --color`,
+    dev: `${crossEnv(env.dev)} webpack-dev-server --color`,
 
-    build: series('nps clean', `${envs.prod()} webpack`),
+    build: series('nps clean', `${crossEnv(env.prod)} webpack`),
 
     test: {
-      default: `${envs.test()} jest --runInBand`,
+      default: `${crossEnv(env.test)} jest --runInBand`,
       watch: series.nps('test --watch'),
       cover: series.nps('test --coverage'),
     },

@@ -1,9 +1,11 @@
 const webpack = require('webpack');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const merge = require('webpack-merge');
 const { chProcessing, chDisable } = require('@fem/logger');
+const webpackBaseConfig = require('./webpack.base.config');
 
-const config = {
+const devConfig = {
   devtool: 'source-map',
   mode: 'development',
   plugins: [
@@ -39,5 +41,7 @@ const config = {
     hot: true,
   },
 };
+
+const config = merge(webpackBaseConfig, devConfig);
 
 module.exports = config;

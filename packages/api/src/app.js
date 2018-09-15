@@ -1,10 +1,11 @@
 import express from 'express';
 import expressJWT from 'express-jwt';
 import { Morgan } from '@fem/logger';
+import { env } from '@fem/dev-utils';
 
 export const app = express();
 
-if (process.env.NODE_ENV === 'development') {
+if (env.isDev) {
   app.use(Morgan('api'));
 }
 

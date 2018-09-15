@@ -1,16 +1,7 @@
-const merge = require('webpack-merge');
-const webpackBaseConfig = require('./configs/webpack/webpack.base.config');
-const webpackDevConfig = require('./configs/webpack/webpack.dev.config');
-const webpackProdConfig = require('./configs/webpack/webpack.prod.config');
+const { env } = require('@fem/dev-utils');
 
-let config = webpackBaseConfig; // eslint-disable-line import/no-mutable-exports
-
-if (process.env.NODE_ENV === 'development') {
-  config = merge(webpackBaseConfig, webpackDevConfig);
-} else if (process.env.NODE_ENV === 'production') {
-  config = merge(webpackBaseConfig, webpackProdConfig);
-} else {
-  throw new Error('Environment for webpack config not matched');
-}
+const config = env.isDev
+  ? require('./configs/webpack/webpack.dev.config')
+  : require('./configs/webpack/webpack.prod.config');
 
 module.exports = config;

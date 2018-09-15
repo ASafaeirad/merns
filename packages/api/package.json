@@ -4,6 +4,7 @@
   "license": "MIT",
   "main": "dist/api.bundle.js",
   "scripts": {
+    "clean": "nps clean",
     "dev": "nps dev",
     "test:watch": "nps test.watch",
     "test:cover": "nps test.cover",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.1",
+    "@fem/dev-utils": "*",
     "@fem/eslint-config": "*",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.2",
