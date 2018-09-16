@@ -1,4 +1,4 @@
-const { HotModuleReplacementPlugin, NamedModulesPlugin } = require('webpack');
+const { HotModuleReplacementPlugin } = require('webpack');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
@@ -10,7 +10,6 @@ const devConfig = {
   mode: 'development',
   plugins: [
     new HotModuleReplacementPlugin(),
-    new NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: 'index.html',
