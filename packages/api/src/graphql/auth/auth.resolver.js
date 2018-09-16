@@ -1,4 +1,4 @@
-import { isNotAuthenticatedResolver, isAuthenticatedResolver } from '@fem/graphql-tools';
+import { isNotAuthenticatedResolver, isAuthenticatedResolver } from '@fem/graphql-tools/dist/server';
 import * as authController from './auth.controller';
 
 const createUser = isNotAuthenticatedResolver.createResolver(
