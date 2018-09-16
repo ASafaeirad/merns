@@ -4,7 +4,6 @@
  * @param {function} generator - Doc Generator Function
  * @param {object} options - Contains includeCounter that pass index as param to generator function
  */
-
 export const fakeInteger = (min, max) => Math.floor(Math.random() * (max - min + 1)) + max;
 
 export const fakeNTimes = async (countInput = 0, generator, { includeCounter } = {}) => {
