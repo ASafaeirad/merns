@@ -8,5 +8,9 @@
   "main": "index.js",
   "dependencies": {
     "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {
+    "@fem/eslint-config": "*",
+    "eslint": "^5.5.0"
   }
 }
