@@ -1,0 +1,26 @@
+{
+  "extends": "../../.babelrc",
+  "presets": [
+    ["@babel/preset-react"]
+  ],
+  "env": {
+    "production": {
+      "presets": [
+        ["@babel/preset-react"]
+      ],
+      "plugins": [
+        ["@babel/plugin-transform-react-constant-elements"],
+        ["@babel/plugin-transform-react-inline-elements"],
+        ["transform-react-remove-prop-types",{ "ignoreFilenames": ["node_modules"] } ]
+      ]
+    },
+    "development": {
+      "presets": [
+        ["@babel/preset-react", { "development": true} ]
+      ],
+      "plugins": [
+        ["react-hot-loader/babel"]
+      ]
+    }
+  }
+}

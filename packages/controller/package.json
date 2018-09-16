@@ -1,0 +1,41 @@
+{
+  "name": "@merns/controller",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/controller.bundle.js",
+  "scripts": {
+    "clean": "nps clean",
+    "build:watch": "webpack --watch",
+    "build": "webpack",
+    "test:watch": "nps test.watch",
+    "test:cover": "nps test.cover"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "@fem/graphql-tools": "*",
+    "@merns/common": "*",
+    "apollo-client": "^2.4.2",
+    "graphql": "^0.13.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.1",
+    "react-apollo": "^2.1.11",
+    "react-dom": "^16.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/plugin-transform-react-constant-elements": "^7.0.0",
+    "@babel/plugin-transform-react-inline-elements": "^7.0.0",
+    "@fem/dev-utils": "*",
+    "@fem/eslint-config": "*",
+    "@fem/webpack-utils": "*",
+    "@fem/logger": "*",
+    "babel-eslint": "^9.0.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.15",
+    "case-sensitive-paths-webpack-plugin": "^2.1.2",
+    "eslint": "^5.5.0",
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-merge": "^4.1.4",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
