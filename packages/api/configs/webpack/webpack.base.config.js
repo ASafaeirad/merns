@@ -25,7 +25,7 @@ const config = {
   },
   plugins: [
     new CaseSensitivePathsPlugin(),
-    new Dotenv(),
+    new Dotenv({ path: path.join(__dirname, '..', '..', '.env') }),
   ],
 };
 
