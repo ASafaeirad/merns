@@ -20,7 +20,11 @@ export const startServer = async () => {
 
   const server = new ApolloServer({ typeDefs, resolvers, context });
 
-  server.applyMiddleware({ app, cors: true, bodyParserConfig: true });
+  server.applyMiddleware({
+    app,
+    cors: true,
+    bodyParserConfig: true,
+  });
 
   app.listen({ port: 4000 }, logServerStat);
   return server;
