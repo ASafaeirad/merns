@@ -6,7 +6,7 @@ export const baseResolver = createResolver(null, (_, __, ___, err) => {
     return new UserInputError();
   }
 
-  return new UnknownError(err.message, err);
+  return new UnknownError(err.message, { stack: err.stack });
 });
 
 export const isAuthenticatedResolver = baseResolver.createResolver(async (_, __, ctx) => {
