@@ -2,6 +2,7 @@
   "parser": "babel-eslint",
   "extends": ["@fem/eslint-config"],
   "rules": {
-    "no-multi-spaces": 0
+    "no-multi-spaces": 0,
+    "import/no-dynamic-require": 0
   }
 }
