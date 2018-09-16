@@ -19,7 +19,7 @@ export const RedisClient = (function RedisClinet() {
     });
   }
 
-  async function getInstance() {
+  function getInstance() {
     if (!client) {
       throw new Error('Try to get RedisClient before Init');
     }
