@@ -30,7 +30,6 @@
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.2",
     "case-sensitive-paths-webpack-plugin": "^2.1.2",
-    "dotenv-webpack": "^1.5.7",
     "eslint": "^5.5.0",
     "faker": "^4.1.0",
     "rimraf": "^2.6.2",
