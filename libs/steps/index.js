@@ -1,15 +1,15 @@
-const havePrecision = (value) => value.toString().indexOf('.') > -1;
+const havePrecision = value => value.toString().indexOf('.') > -1;
 
 function steps(initial = 0, step = 1, lastValue = 1) {
-  var arr = [];
+  let arr = [];
 
   if (step === 0 || typeof step !== 'number') {
     throw new Error(`[steps] Step is invalid: resived ${step}`);
   }
 
-  var precision = 0;
+  let precision = 0;
 
-  if(havePrecision(step)) {
+  if (havePrecision(step)) {
     precision = (step.toString()).split('.')[1].length;
   }
 
@@ -23,6 +23,6 @@ function steps(initial = 0, step = 1, lastValue = 1) {
   }
 
   return arr;
-};
+}
 
 module.exports = steps;

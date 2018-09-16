@@ -11,6 +11,8 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@fem/eslint-config": "*",
+    "eslint": "^5.5.0",
     "jest": "23.6.0"
   },
   "jest": {
