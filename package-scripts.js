@@ -25,15 +25,23 @@ module.exports.scripts = {
     default: concurrent({
       api: {
         script: 'yarn workspace @merns/api run dev',
-        color: 'none.green.bold'
+        color: 'null.bold'
       },
       dal: {
         script: 'yarn workspace @merns/dal run build:watch',
-        color: 'none.cyan.bold'
+        color: 'null.bold'
+      },
+      controller: {
+        script: 'yarn workspace @merns/controller run build:watch',
+        color: 'null.bold'
+      },
+      common: {
+        script: 'yarn workspace @merns/common run build:watch',
+        color: 'null.bold'
       },
       web: {
         script: 'yarn workspace @merns/web run dev',
-        color: 'none.orange.bold'
+        color: 'null.bold'
       },
     }),
   },
