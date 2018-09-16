@@ -6,10 +6,11 @@
     "name": "frontendmonster",
     "email": "frontendmonster@gmail.com"
   },
+  "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "webpack --config webpack.client.config && webpack --config webpack.config.server",
-    "build:watch": "webpack --watch"
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "build:watch": "rollup -c -w"
   },
   "dependencies": {
     "apollo-cache-inmemory": "^1.2.10",
@@ -28,12 +29,15 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@fem/eslint-config": "*",
+    "@fem/dev-utils": "*",
     "babel-eslint": "^9.0.0",
-    "babel-loader": "^8.0.2",
+    "cross-env": "^5.2.0",
     "eslint": "^5.5.0",
     "rimraf": "^2.6.2",
-    "webpack-node-externals": "^1.7.2",
-    "webpack": "^4.18.0",
-    "webpack-cli": "^3.1.0"
+    "rollup": "^0.66.0",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-terser": "^3.0.0"
   }
 }
