@@ -6,7 +6,7 @@
     "name": "frontendmonster",
     "email": "frontendmonster@gmail.com"
   },
-  "main": "dist/logger.min.js",
+  "main": "dist/logger.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production rollup -c",

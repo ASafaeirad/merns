@@ -29,7 +29,6 @@ const config = {
 };
 
 if (env.isProd) {
-  config.output.file = `./dist/${libname}.min.js`;
   config.plugins.push(terser());
 }
 
