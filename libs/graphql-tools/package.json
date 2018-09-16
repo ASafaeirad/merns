@@ -20,6 +20,7 @@
     "apollo-link": "^1.2.3",
     "apollo-resolvers": "^1.4.1",
     "apollo-server": "^2.0.7",
+    "caller": "^1.0.1",
     "graphql": "0.13.2"
   },
   "devDependencies": {
