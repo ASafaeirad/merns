@@ -19,7 +19,7 @@ export const generateFakeUser = async (body = {}) => {
 
 export const seedDB = async ({ flush = true } = {}) => {
   const strictUser = {
-    email: 'student@gmail.com',
+    email: 'user@gmail.com',
     password: '12345678',
   };
 
