@@ -6,15 +6,21 @@
     "name": "frontendmonster",
     "email": "frontendmonster@gmail.com"
   },
-  "main": "dist/graphql-tools.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "webpack",
+    "build": "webpack --config webpack.client.config && webpack --config webpack.config.server",
     "build:watch": "webpack --watch"
   },
   "dependencies": {
+    "apollo-cache-inmemory": "^1.2.10",
+    "apollo-client": "^2.4.2",
+    "apollo-link-error": "^1.1.1",
+    "apollo-link-http": "^1.5.5",
+    "apollo-link-state": "^0.4.2",
+    "apollo-link": "^1.2.3",
     "apollo-resolvers": "^1.4.1",
-    "apollo-server": "^2.0.7"
+    "apollo-server": "^2.0.7",
+    "graphql": "0.13.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",

@@ -1,4 +1,4 @@
-export const createRetriableFetch = ({ endpoint, storage, cache, onLogin, onLogout }) => async (uri, options) => {
+export const createRetriableFetch = ({ endpoint, storage, cache, onLogin, onLogout, refreshTokenMutation }) => async (uri, options) => {
   try {
     const initialReq = fetch(uri, options);
     const initialRes = await initialReq;
@@ -12,7 +12,7 @@ export const createRetriableFetch = ({ endpoint, storage, cache, onLogin, onLogo
     try {
       if (e.message === 'UnauthorizedError') {
         const { refreshToken, user } = storage;
-        const { newAccessToken, newRefreshToken } = await getNewToken(endpoint, refreshToken, user);
+        const { newAccessToken, newRefreshToken } = await getNewToken(endpoint, refreshToken, user, refreshTokenMutation);
         onLogin(storage, cache, user, newAccessToken, newRefreshToken);
 
         options.headers.authorization = newAccessToken;
@@ -25,13 +25,15 @@ export const createRetriableFetch = ({ endpoint, storage, cache, onLogin, onLogo
 };
 
 
-async function getNewToken(endpoint, refreshToken, user) {
+async function getNewToken(endpoint, refreshToken, user, refreshTokenMutation) {
   const res = await fetch(endpoint, {
     method: 'POST',
     body: JSON.stringify({
-      query: `mutation {
-        refreshToken(input: {user_id: "${user.id}", refresh_token: "${refreshToken}"}) { token, refresh_token }
-      }`,
+      query: refreshTokenMutation,
+      variables: {
+        userId: user.id,
+        refreshToken,
+      },
     }),
     headers: { 'Content-Type': 'application/json' },
   });
@@ -46,7 +48,7 @@ async function getNewToken(endpoint, refreshToken, user) {
     throw json.errors[0];
   }
 
-  const { token: newAccessToken, refresh_token: newRefreshToken } = json.data.refreshToken;
+  const { token: newAccessToken, refreshToken: newRefreshToken } = json.data.refreshToken;
 
   return { newAccessToken, newRefreshToken };
 }

@@ -1,20 +1,12 @@
 import { createResolver } from 'apollo-resolvers';
-
-import {
-  AlreadyAuthenticatedError,
-  UnauthorizedError,
-  UnknownError,
-  UserInputError,
-} from './graphql-errors';
+import { AlreadyAuthenticatedError, UnauthorizedError, UnknownError, UserInputError } from './graphql-errors';
 
 export const baseResolver = createResolver(null, (_, __, ___, err) => {
   if (err.name === 'ValidationError') {
     return new UserInputError();
   }
 
-  return new UnknownError({
-    data: { name: err.name },
-  });
+  return new UnknownError(err.message, err);
 });
 
 export const isAuthenticatedResolver = baseResolver.createResolver(async (_, __, ctx) => {

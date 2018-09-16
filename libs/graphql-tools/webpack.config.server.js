@@ -7,10 +7,10 @@ const config = {
   devtool: 'source-map',
   target: 'node',
   mode: 'production',
-  entry: './index.js',
+  entry: './src/server/index.js',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: `${libName}.js`,
+    filename: 'server.js',
     library: libName,
     libraryTarget: 'umd',
     umdNamedDefine: true,
