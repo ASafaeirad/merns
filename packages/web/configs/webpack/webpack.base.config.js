@@ -13,7 +13,7 @@ const config = {
     sourceMapFilename: '[name].[hash].map',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.webpack.js', '.web.js', '.mjs', '.js', '.json', '.jsx'],
   },
   module: {
     rules: [...webpackUtils.generateWebpackRules(
@@ -23,6 +23,11 @@ const config = {
         font: true,
         image: true,
         style: true,
+      },
+      {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto',
       },
     )],
   },
