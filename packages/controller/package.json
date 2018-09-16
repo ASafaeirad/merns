@@ -30,6 +30,7 @@
     "@fem/webpack-utils": "*",
     "@fem/logger": "*",
     "babel-eslint": "^9.0.0",
+    "babel-loader": "^8.0.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.15",
     "case-sensitive-paths-webpack-plugin": "^2.1.2",
     "eslint": "^5.5.0",
