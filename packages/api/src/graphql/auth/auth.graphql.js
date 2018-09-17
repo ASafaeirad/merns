@@ -1,3 +1,6 @@
+import { gql } from 'apollo-server';
+
+export const authTypes = gql`
 extend type Query {
   profile: User!
 }
@@ -34,3 +37,4 @@ input CreateUserInput {
   password: String!
   name: String
 }
+`;

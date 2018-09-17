@@ -1,3 +1,6 @@
+import { gql } from 'apollo-server';
+
+export const userTypes = gql`
 extend type Query {
   allUsers: [User]!
 }
@@ -7,3 +10,4 @@ type User {
   email: String!
   name: String
 }
+`;
