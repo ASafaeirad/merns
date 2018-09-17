@@ -4,6 +4,7 @@ const through = require('through2');
 const newer = require('gulp-newer');
 const babel = require('gulp-babel');
 const gulpWatch = require('gulp-watch');
+const sourcemaps = require('gulp-sourcemaps');
 const nodemon = require('gulp-nodemon');
 const { Signale, chProcessing } = require('@fem/logger');
 
@@ -26,7 +27,9 @@ const build = () => gulp
   .pipe(logErrors())
   .pipe(newer({ dest: './dist' }))
   .pipe(compilationLogger())
+  .pipe(sourcemaps.init())
   .pipe(babel())
+  .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest('./dist'));
 
 const watchBuild = () => gulpWatch(source, { debounceDelay: 200 }, gulp.task('build'));

@@ -37,6 +37,7 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-plumber": "^1.2.0",
     "gulp-watch": "^5.0.1",
+    "gulp-sourcemaps": "^2.6.4",
     "nodemon": "^1.18.4",
     "nps": "^5.9.3",
     "nps-utils": "^1.7.0",
