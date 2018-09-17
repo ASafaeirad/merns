@@ -16,20 +16,21 @@ const config = {
     extensions: ['.webpack.js', '.web.js', '.mjs', '.js', '.json', '.jsx'],
   },
   module: {
-    rules: [...webpackUtils.generateWebpackRules(
-      {
-        babel: true,
-        graphql: true,
-        font: true,
-        image: true,
-        style: true,
-      },
-      {
-        test: /\.mjs$/,
-        include: /node_modules/,
-        type: 'javascript/auto',
-      },
-    )],
+    rules: [
+      ...webpackUtils.generateWebpackRules(
+        {
+          babel: true,
+          graphql: true,
+          font: true,
+          image: true,
+          style: true,
+        },
+        {
+          test: /\.mjs$/,
+          include: /node_modules/,
+          type: 'javascript/auto',
+        },
+      )],
   },
   plugins: [
     new DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV) } }),
