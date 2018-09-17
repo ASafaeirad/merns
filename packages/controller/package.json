@@ -5,7 +5,7 @@
   "main": "dist",
   "scripts": {
     "clean": "rimraf dist",
-    "lint": "eslint ./src --ext .js",
+    "lint": "eslint ./src --ext '.js, .jsx'",
     "build:watch": "gulp watch",
     "build": "gulp build"
   },

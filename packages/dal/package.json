@@ -7,12 +7,12 @@
   },
   "license": "MIT",
   "version": "0.0.1",
-  "main": "./dist/dal.bundle.js",
+  "main": "dist",
   "scripts": {
     "clean": "rimraf dist",
     "lint": "eslint ./src --ext .js",
-    "build": "webpack",
-    "build:watch": "webpack --watch"
+    "build": "gulp build",
+    "build:watch": "gulp watch"
   },
   "dependencies": {
     "@fem/logger": "*",
