@@ -1,0 +1,8 @@
+query authStatus {
+  authStatus @client {
+    token
+    user {
+      id
+    }
+  }
+}
