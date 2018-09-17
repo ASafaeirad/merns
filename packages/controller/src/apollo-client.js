@@ -1,5 +1,5 @@
 import { GRAPHQL_URL } from '@merns/common';
-import { createApolloClient } from '@fem/graphql-tools/dist/client';
+import { createApolloClient } from '@fem/graphql-tools/client';
 
 export const onLogin = (storage, cache, user, accessToken, refreshToken) => {
   storage.setToken(accessToken, refreshToken);

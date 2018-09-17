@@ -1,4 +1,4 @@
-import { createResolver, isAuthenticatedResolver } from '@fem/graphql-tools/dist/server';
+import { createResolver, isAuthenticatedResolver } from '@fem/graphql-tools/server';
 import * as userController from './user.controller';
 
 const allUsers = createResolver(userController.allUsers);
