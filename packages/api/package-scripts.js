@@ -7,9 +7,9 @@ module.exports.scripts = {
 
   lint: 'eslint ./src --ext .js',
 
-  dev: `${env.set(env.dev)} webpack`,
+  dev: `${env.set(env.dev)} gulp dev`,
 
-  build: `${env.set(env.prod)} webpack`,
+  build: 'gulp build',
 
   test: {
     default: `${env.set(env.test)} jest --runInBand`,

@@ -2,7 +2,7 @@
   "name": "@merns/api",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "dist/api.bundle.js",
+  "main": "dist/index",
   "scripts": {
     "clean": "nps clean",
     "dev": "nps dev",
@@ -19,27 +19,27 @@
     "@merns/dal": "*",
     "apollo-server": "^2.0.7",
     "apollo-server-express": "^2.0.6",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-jwt": "^5.3.1",
-    "graphql": "0.13.2",
-    "raw-loader": "^0.5.1"
+    "graphql": "0.13.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.1",
     "@fem/dev-utils": "*",
     "@fem/eslint-config": "*",
     "babel-eslint": "^9.0.0",
-    "babel-loader": "^8.0.2",
-    "case-sensitive-paths-webpack-plugin": "^2.1.2",
-    "dotenv-webpack": "^1.5.7",
     "eslint": "^5.5.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-watch": "^5.0.1",
+    "nodemon": "^1.18.4",
     "nps": "^5.9.3",
     "nps-utils": "^1.7.0",
-    "source-map-support": "^0.5.9",
-    "start-server-webpack-plugin": "^2.2.5",
-    "webpack": "^4.18.0",
-    "webpack-cli": "^3.1.0",
-    "webpack-merge": "^4.1.4",
-    "webpack-node-externals": "^1.7.2"
+    "through2": "^2.0.3"
   }
 }
