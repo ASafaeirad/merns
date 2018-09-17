@@ -2,9 +2,10 @@
   "name": "@merns/controller",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "dist/controller.bundle.js",
+  "main": "dist",
   "scripts": {
     "clean": "rimraf dist",
+    "lint": "eslint ./src --ext .js",
     "build:watch": "gulp watch",
     "build": "gulp build"
   },
