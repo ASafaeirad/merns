@@ -19,7 +19,7 @@ const config = {
   resolve: {
     extensions: ['.webpack.js', '.web.js', '.mjs', '.js', '.json', '.jsx'],
   },
-  externals: [Object.keys(require('./package.json').dependencies)],
+  externals: [Object.keys(require('./package.json').dependencies).filter(_ => _ !== 'graphql')],
   stats: {
     all: !env.isDev,
     colors: true,
