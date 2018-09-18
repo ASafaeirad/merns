@@ -7,7 +7,7 @@
     "dev": "nps dev",
     "test:watch": "nps test.watch",
     "test:cover": "nps test.cover",
-    "lint": "nps lint",
+    "lint": "eslint ./src --ext '.js, .jsx'",
     "build": "nps build"
   },
   "dependencies": {

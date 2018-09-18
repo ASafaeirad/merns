@@ -12,6 +12,7 @@ module.exports.scripts = {
     default: 'lerna run lint',
     core: 'lerna run lint --scope @merns/*',
     libs: 'lerna run lint --scope @fem/*',
+    fix: 'lerna run lint -- --fix',
   },
 
   build: {

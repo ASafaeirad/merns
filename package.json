@@ -9,6 +9,7 @@
     "lint": "nps lint",
     "lint:core": "nps lint.core",
     "lint:libs": "nps lint.libs",
+    "lint:fix": "nps lint.fix",
     "build": "nps build",
     "build:core": "nps build.core",
     "build:libs": "nps build.libs",
@@ -17,7 +18,8 @@
     "watch:libs": "nps watch.libs",
     "dev": "nps dev",
     "test": "nps test",
-    "check": "nps check"
+    "check": "nps check",
+    "precommit": "lint-staged"
   },
   "workspaces": [
     "packages/*",
@@ -40,11 +42,19 @@
     "gulp-plumber": "^1.2.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-watch": "^5.0.1",
+    "husky": "^0.14.3",
     "lerna": "^3.3.1",
+    "lint-staged": "^7.2.2",
     "merge-stream": "^1.0.1",
     "nodemon": "^1.18.4",
     "nps": "^5.9.3",
     "nps-utils": "^1.7.0",
     "through2": "^2.0.3"
+  },
+  "lint-staged": {
+    "app/**/*.{js,jsx,json}": [
+      "nps lint:fix",
+      "git add"
+    ]
   }
 }

@@ -5,8 +5,6 @@ const { env } = require('@fem/dev-utils');
 module.exports.scripts = {
   clean: rimraf('dist'),
 
-  lint: 'eslint ./src --ext .js',
-
   dev: `${env.set(env.dev)} gulp dev`,
 
   build: 'gulp build',
