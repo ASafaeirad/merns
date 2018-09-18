@@ -1,4 +1,4 @@
-const { series } = require('nps-utils');
+const { series, concurrent } = require('nps-utils');
 const { env } = require('@fem/dev-utils');
 
 module.exports.scripts = {
@@ -26,7 +26,20 @@ module.exports.scripts = {
     libs: 'lerna run build:watch --parallel --scope @fem/*',
   },
 
-  dev: `${env.set(env.dev)} gulp dev`,
+  dev: concurrent({
+    api: {
+      script: `${env.set(env.dev)} gulp dev`,
+      color: 'black.bold',
+    },
+    web: {
+      script: `${env.set(env.dev)} yarn workspace @merns/web run dev`,
+      color: 'black.bold',
+    },
+    ctrl: {
+      script: `${env.set(env.dev)} yarn workspace @merns/controller run build:watch`,
+      color: 'black.bold',
+    },
+  }),
 
   test: 'lerna run test',
 
