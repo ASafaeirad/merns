@@ -1,0 +1,4 @@
+linters:
+  ./**/*.js:
+    - eslint . --ignore-pattern /dist --ignore-pattern /node_modules --ext .js --fix
+    - git add

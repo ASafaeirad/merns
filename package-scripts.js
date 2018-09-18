@@ -15,6 +15,11 @@ module.exports.scripts = {
     fix: 'lerna run lint -- --fix',
   },
 
+  fix: {
+    core: 'lerna run lint --scope @merns/* -- --fix',
+    libs: 'lerna run lint --scope @fem/* -- --fix',
+  },
+
   build: {
     default: 'lerna run build',
     core: 'lerna run build --scope @merns/*',

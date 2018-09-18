@@ -1,0 +1,4 @@
+linters:
+  ./**/*.{js,jsx}:
+    - eslint . --ignore-pattern /dist --ignore-pattern /node_modules --ext ".js, .jsx" --fix
+    - git add

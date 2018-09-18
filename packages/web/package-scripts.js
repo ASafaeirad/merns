@@ -12,5 +12,5 @@ module.exports.scripts = {
     default: `${env.set(env.test)} jest --runInBand`,
     watch: series.nps('test --watch'),
     cover: series.nps('test --coverage'),
-  }
+  },
 };

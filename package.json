@@ -19,7 +19,7 @@
     "dev": "nps dev",
     "test": "nps test",
     "check": "nps check",
-    "precommit": "lint-staged"
+    "precommit": "lerna run --concurrency 1 --stream precommit"
   },
   "workspaces": [
     "packages/*",
@@ -50,11 +50,5 @@
     "nps": "^5.9.3",
     "nps-utils": "^1.7.0",
     "through2": "^2.0.3"
-  },
-  "lint-staged": {
-    "app/**/*.{js,jsx,json}": [
-      "nps lint:fix",
-      "git add"
-    ]
   }
 }
