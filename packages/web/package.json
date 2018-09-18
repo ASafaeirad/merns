@@ -12,10 +12,9 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "@babel/preset-react": "^7.0.0",
     "@merns/common": "*",
     "@merns/controller": "*",
-    "graphql": "^0.13.2",
+    "graphql": "^14.0.2",
     "jwt-decode": "^2.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
@@ -26,6 +25,7 @@
     "@babel/core": "^7.0.1",
     "@babel/plugin-transform-react-constant-elements": "^7.0.0",
     "@babel/plugin-transform-react-inline-elements": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "@fem/dev-utils": "*",
     "@fem/eslint-config": "*",
     "@fem/logger": "*",
