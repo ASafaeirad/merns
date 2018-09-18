@@ -13,4 +13,4 @@ module.exports.scripts = {
     watch: series.nps('test --watch'),
     cover: series.nps('test --coverage'),
   }
-}
+};
