@@ -1,6 +1,6 @@
-const nodeExternals = require('webpack-node-externals');
 const path = require('path');
 const webpackUtils = require('@fem/webpack-utils');
+const { env } = require('@fem/dev-utils');
 
 const libName = 'controller';
 
@@ -18,6 +18,14 @@ const config = {
   },
   resolve: {
     extensions: ['.webpack.js', '.web.js', '.mjs', '.js', '.json', '.jsx'],
+  },
+  externals: [Object.keys(require('./package.json').dependencies)],
+  stats: {
+    all: !env.isDev,
+    colors: true,
+    errors: true,
+    warnings: true,
+    env: true,
   },
   module: {
     rules: [
