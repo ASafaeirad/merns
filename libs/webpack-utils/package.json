@@ -14,7 +14,13 @@
   },
   "dependencies": {
     "autoprefixer": "*",
-    "postcss-flexbugs-fixes": "*"
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "postcss-flexbugs-fixes": "*",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -31,5 +37,13 @@
     "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-terser": "^3.0.0"
+  },
+  "peerDependencies": {
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1"
   }
 }

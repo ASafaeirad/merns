@@ -30,8 +30,8 @@ const baseRules = {
     { test: /\.eot(\?v=\d+.\d+.\d+)?$/i, exclude: /node_modules/, loader: 'file-loader' },
     { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/i, exclude: /node_modules/, loader: 'url-loader', query: query('application/font-woff') },
     { test: /\.[ot]tf(\?v=\d+.\d+.\d+)?$/i, exclude: /node_modules/, loader: 'url-loader', query: query('application/octet-stream') },
-    { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/i, exclude: /node_modules/, loader: 'url-loader', query: query('image/svg+xml') },
   ],
+  svg: [{ test: /\.svg(\?v=\d+\.\d+\.\d+)?$/i, exclude: /node_modules/, loader: 'file-loader', query: query('image/svg+xml') }],
   image: [{ test: /\.(jpe?g|png|gif|ico)$/i, exclude: /node_modules/, loader: 'file-loader' }],
   style: [
     { test: /(\.css|\.scss|\.sass)$/i,
