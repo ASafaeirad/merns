@@ -1,5 +1,6 @@
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const { DefinePlugin } = require('webpack');
+const webpack = require('webpack');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpackUtils = require('@fem/webpack-utils');
 const path = require('path');
 
@@ -13,6 +14,9 @@ const config = {
     sourceMapFilename: '[name].[hash].map',
   },
   resolve: {
+    modules: [
+      path.resolve(__dirname, '..', '..', '..', '..', 'node_modules'),
+    ],
     extensions: ['.webpack.js', '.web.js', '.mjs', '.js', '.json', '.jsx'],
   },
   module: {
@@ -33,9 +37,13 @@ const config = {
       )],
   },
   plugins: [
-    new DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV) } }),
+    new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV) } }),
     new CaseSensitivePathsPlugin(),
   ],
 };
+
+if (process.env.WBA) {
+  config.plugins.push(new BundleAnalyzerPlugin());
+}
 
 module.exports = config;

@@ -3,5 +3,13 @@
   "extends": ["@fem/eslint-config"],
   "env": {
     "browser": true
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/themes/**/*.js"],
+      "rules": {
+        "key-spacing": "off"
+      }
+    }
+  ]
 }

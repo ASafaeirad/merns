@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { LoginController } from '@merns/controller';
+import { Button, Input } from '@fem/northui';
 import { Storage } from './services/storage.service';
 
 class Login extends Component {
@@ -17,9 +18,9 @@ class Login extends Component {
           this.login = login;
           return (
             <div>
-              <input />
-              <input />
-              <button type="submit" onClick={this.onSubmit}>Login</button>
+              <Input border />
+              <Input border />
+              <Button primary type="submit" onClick={this.onSubmit}>Login</Button>
             </div>
           );
         }}

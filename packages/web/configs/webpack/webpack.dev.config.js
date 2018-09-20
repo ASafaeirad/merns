@@ -24,7 +24,6 @@ const devConfig = {
       incomplete: ' ',
       complete: '⬛',
     }),
-
   ],
   stats: {
     all: false,
