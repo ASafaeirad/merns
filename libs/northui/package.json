@@ -11,8 +11,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "lint": "eslint ./src --ext .js",
-    "build": "cross-env NODE_ENV=production rollup -c",
-    "build:watch": "rollup -c -w",
+    "build": "webpack",
+    "build:watch": "webpack -w",
     "storybook": "start-storybook -p 8080 -c configs/storybook",
     "storybook:build": "build-storybook"
   },
@@ -38,6 +38,7 @@
     "@babel/preset-react": "^7.0.0",
     "@fem/dev-utils": "*",
     "@fem/eslint-config": "*",
+    "@fem/webpack-utils": "*",
     "@storybook/addon-actions": "^4.0.0-alpha.22",
     "@storybook/addon-knobs": "^4.0.0-alpha.22",
     "@storybook/addon-links": "^4.0.0-alpha.22",
@@ -49,10 +50,10 @@
     "eslint": "^5.5.0",
     "moment": "^2.22.2",
     "rimraf": "^2.6.2",
-    "rollup": "^0.66.0",
-    "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-commonjs": "^9.1.6",
-    "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-terser": "^3.0.0"
+    "svg-url-loader": "^2.3.2",
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8",
+    "webpack-merge": "^4.1.4"
   }
 }
