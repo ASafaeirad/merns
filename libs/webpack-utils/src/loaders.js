@@ -42,6 +42,7 @@ const baseRules = {
         { loader: 'sass-loader', options: { includePaths: [], sourceMap: true } },
       ] },
   ],
+  mjs: [{ test: /\.mjs$/, include: /node_modules/, type: 'javascript/auto' }],
 };
 
 export function generateWebpackRules(options) {

@@ -28,11 +28,7 @@ const config = {
           font: true,
           image: true,
           style: true,
-        },
-        {
-          test: /\.mjs$/,
-          include: /node_modules/,
-          type: 'javascript/auto',
+          mjs: true,
         },
       )],
   },

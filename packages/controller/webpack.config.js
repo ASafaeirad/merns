@@ -33,13 +33,9 @@ const config = {
         {
           graphql: true,
           babel: true,
+          mjs: true,
         },
       ),
-      {
-        test: /\.mjs$/,
-        include: /node_modules/,
-        type: 'javascript/auto',
-      },
     ],
   },
 };
