@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
-    "@fem/graphql-tools": "*",
+    "@frontendmonster/graphql-utils": "^1.0.2",
     "@merns/common": "*",
     "apollo-client": "^2.4.2",
     "graphql": "^0.13.2",

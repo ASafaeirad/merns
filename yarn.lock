@@ -827,6 +827,21 @@
     eslint-plugin-jsx-a11y "^6.1.1"
     eslint-plugin-react "^7.11.1"
 
+"@frontendmonster/graphql-utils@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@frontendmonster/graphql-utils/-/graphql-utils-1.0.2.tgz#715ec9cf006727cb1174211c7a9307e44384f902"
+  dependencies:
+    apollo-cache-inmemory "^1.2.10"
+    apollo-client "^2.4.2"
+    apollo-link "^1.2.3"
+    apollo-link-error "^1.1.1"
+    apollo-link-http "^1.5.5"
+    apollo-link-state "^0.4.2"
+    apollo-resolvers "^1.4.1"
+    apollo-server "^2.0.7"
+    caller "^1.0.1"
+    graphql "^0.13.2"
+
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-1.0.2.tgz#1e6fe5d8027b1f285dc0d31762f566bccd73d5a9"

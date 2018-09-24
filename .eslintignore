@@ -2,8 +2,6 @@ node_modules/
 coverage/
 lib/
 dist/
-libs/graphql-tools/client
-libs/graphql-tools/server
 
 package.json
 *.html

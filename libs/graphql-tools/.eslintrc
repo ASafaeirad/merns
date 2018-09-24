@@ -1,7 +1,0 @@
-{
-  "parser": "babel-eslint",
-  "extends": ["@frontendmonster"],
-  "env": {
-    "browser": true
-  }
-}

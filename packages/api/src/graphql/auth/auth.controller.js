@@ -1,4 +1,4 @@
-import { NotFoundError, AlreadyExistedError } from '@fem/graphql-tools/server';
+import { NotFoundError, AlreadyExistedError } from '@frontendmonster/graphql-utils/server';
 
 export const createUserResolver = async (_, { input }, { models: { User } }) => {
   try {

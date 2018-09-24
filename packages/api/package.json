@@ -13,7 +13,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "@fem/graphql-tools": "*",
+    "@frontendmonster/graphql-utils": "^1.0.2",
     "@merns/common": "*",
     "@merns/dal": "*",
     "apollo-server": "^2.0.7",

@@ -43,7 +43,3 @@ yarn-error.log*
 
 # Deadcodes
 /.deadcodes
-
-# specific
-libs/graphql-tools/client
-libs/graphql-tools/server
