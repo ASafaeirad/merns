@@ -6,13 +6,13 @@ const babel = require('gulp-babel');
 const gulpWatch = require('gulp-watch');
 const sourcemaps = require('gulp-sourcemaps');
 const nodemon = require('gulp-nodemon');
-const { Signale, chProcessing } = require('@fem/logger');
+const { Signale, chalks } = require('@frontendmonster/dev-utils/logger');
 
 const gulpLogger = Signale('gulp');
 const source = './src/**/*.js';
 
 const compilationLogger = () => through.obj((file, _, callback) => {
-  gulpLogger.success(`Compiling '${chProcessing(file.relative)}'...`);
+  gulpLogger.success(`Compiling '${chalks.processing(file.relative)}'...`);
   callback(null, file);
 });
 

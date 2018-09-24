@@ -1,3 +1,3 @@
-import { Signale } from '@fem/logger';
+import { Signale } from '@frontendmonster/dev-utils/logger';
 
 export const logger = Signale('dal');

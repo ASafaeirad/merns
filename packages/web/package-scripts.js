@@ -1,5 +1,5 @@
 const { rimraf, series } = require('nps-utils');
-const { env } = require('@fem/dev-utils');
+const env = require('@frontendmonster/dev-utils/env');
 
 module.exports.scripts = {
   clean: rimraf('dist'),

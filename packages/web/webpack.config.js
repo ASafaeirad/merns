@@ -1,4 +1,4 @@
-const { env } = require('@fem/dev-utils');
+const env = require('@frontendmonster/dev-utils/env');
 
 const config = env.isDev
   ? require('./configs/webpack/webpack.dev.config')

@@ -2,7 +2,7 @@ const { HotModuleReplacementPlugin } = require('webpack');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
-const { chProcessing, chDisable } = require('@fem/logger');
+const { chalks } = require('@frontendmonster/dev-utils/logger');
 const webpackBaseConfig = require('./webpack.base.config');
 
 const devConfig = {
@@ -20,7 +20,7 @@ const devConfig = {
     }),
     new ProgressBarPlugin({
       summary: false,
-      format: `${chDisable('[webpac] › ')}${chProcessing('⬢')} ${chProcessing('〖:bar〗')}${chProcessing(':percent')}`,
+      format: `${chalks.disable('[webpac] › ')}${chalks.processing('⬢')} ${chalks.processing('〖:bar〗')}${chalks.processing(':percent')}`,
       incomplete: ' ',
       complete: '⬛',
     }),

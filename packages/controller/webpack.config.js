@@ -1,6 +1,6 @@
 const path = require('path');
 const webpackUtils = require('@fem/webpack-utils');
-const { env } = require('@fem/dev-utils');
+const env = require('@frontendmonster/dev-utils/env');
 
 const libName = 'controller';
 

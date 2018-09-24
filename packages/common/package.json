@@ -12,9 +12,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.1",
-    "@fem/dev-utils": "*",
+    "@frontendmonster/dev-utils": "^1.2.0",
     "@frontendmonster/eslint-config": "^1.0.1",
-    "@fem/logger": "*",
     "babel-eslint": "^9.0.0",
     "eslint": "^5.5.0",
     "gulp": "^4.0.0",

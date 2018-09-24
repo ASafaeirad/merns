@@ -9,7 +9,7 @@ const gulpWatch = require('gulp-watch');
 const merge = require('merge-stream');
 const sourcemaps = require('gulp-sourcemaps');
 const nodemon = require('gulp-nodemon');
-const { Signale, chProcessing } = require('@fem/logger');
+const { Signale, chalks } = require('@frontendmonster/dev-utils/logger');
 
 const gulpLogger = Signale('gulp');
 
@@ -47,7 +47,7 @@ function getGlobFromSource(source) {
 }
 
 const compilationLogger = () => through.obj((file, _, callback) => {
-  gulpLogger.success(`Compiling '${chProcessing(file.relative)}'...`);
+  gulpLogger.success(`Compiling '${chalks.processing(file.relative)}'...`);
   callback(null, file);
 });
 

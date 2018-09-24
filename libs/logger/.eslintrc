@@ -1,8 +1,0 @@
-{
-  "parser": "babel-eslint",
-  "extends": ["@frontendmonster"],
-  "rules": {
-    "no-multi-spaces": 0,
-    "import/no-dynamic-require": 0
-  }
-}

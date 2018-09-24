@@ -1,6 +1,6 @@
 import { ApolloServer } from 'apollo-server-express';
 import { RedisClient, MongooseClient, seedDB } from '@merns/dal';
-import { env } from '@fem/dev-utils';
+import env from '@frontendmonster/dev-utils/env';
 import { typeDefs, resolvers, context } from './graphql';
 import { createApp } from './app';
 import { logger } from './api-logger';

@@ -2,7 +2,7 @@ import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import { terser } from 'rollup-plugin-terser';
-import { env } from '@fem/dev-utils';
+import { env } from '@frontendmonster/dev-utils';
 
 const dependencies = Object.keys(require('./package.json').dependencies);
 
