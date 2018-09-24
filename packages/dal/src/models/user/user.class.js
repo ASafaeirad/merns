@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import randToken from 'rand-token';
-import { hash, compare } from '@fem/password';
+import { hash, compare } from '@frontendmonster/password';
 
 export class UserClass {
   static async authenticate(email, password) {

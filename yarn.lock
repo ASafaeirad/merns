@@ -842,6 +842,12 @@
     caller "^1.0.1"
     graphql "^0.13.2"
 
+"@frontendmonster/password@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@frontendmonster/password/-/password-1.0.0.tgz#28958679b5a5980cac219af58b7d2f9dba4e8fd0"
+  dependencies:
+    bcryptjs "^2.4.3"
+
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-1.0.2.tgz#1e6fe5d8027b1f285dc0d31762f566bccd73d5a9"
