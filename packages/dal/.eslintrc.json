@@ -1,6 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": ["@fem/eslint-config"],
+  "extends": ["@frontendmonster"],
   "env": {
     "node": true
   }

@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.1",
-    "@fem/eslint-config": "*",
+    "@frontendmonster/eslint-config": "^1.0.1",
     "@fem/test-utils": "*",
     "babel-eslint": "^9.0.0",
     "eslint": "^5.5.0",

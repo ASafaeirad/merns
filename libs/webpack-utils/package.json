@@ -20,13 +20,14 @@
     "postcss-flexbugs-fixes": "*",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
-    "url-loader": "^1.1.1"
+    "url-loader": "^1.1.1",
+    "webpack": "^4.19.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "@fem/eslint-config": "*",
+    "@frontendmonster/eslint-config": "^1.0.1",
     "@fem/dev-utils": "*",
     "babel-eslint": "^9.0.0",
     "cross-env": "^5.2.0",
@@ -37,13 +38,5 @@
     "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-terser": "^3.0.0"
-  },
-  "peerDependencies": {
-    "babel-loader": "^8.0.2",
-    "css-loader": "^1.0.0",
-    "file-loader": "^2.0.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.0",
-    "url-loader": "^1.1.1"
   }
 }

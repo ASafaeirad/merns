@@ -18,7 +18,7 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@fem/dev-utils": "*",
-    "@fem/eslint-config": "*",
+    "@frontendmonster/eslint-config": "^1.0.1",
     "babel-eslint": "^9.0.0",
     "cross-env": "^5.2.0",
     "eslint": "^5.5.0",

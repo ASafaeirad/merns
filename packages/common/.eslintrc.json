@@ -4,5 +4,5 @@
     "browser": true,
     "node": true
   },
-  "extends": ["@fem/eslint-config"]
+  "extends": ["@frontendmonster"]
 }

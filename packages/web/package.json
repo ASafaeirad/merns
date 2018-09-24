@@ -30,7 +30,7 @@
     "@babel/plugin-transform-react-inline-elements": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@fem/dev-utils": "*",
-    "@fem/eslint-config": "*",
+    "@frontendmonster/eslint-config": "^1.0.1",
     "@fem/logger": "*",
     "@fem/webpack-utils": "*",
     "babel-eslint": "^9.0.0",

@@ -10,7 +10,7 @@
     "bcryptjs": "^2.4.3"
   },
   "devDependencies": {
-    "@fem/eslint-config": "*",
+    "@frontendmonster/eslint-config": "^1.0.1",
     "eslint": "^5.5.0"
   }
 }

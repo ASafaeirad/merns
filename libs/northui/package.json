@@ -37,7 +37,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@fem/dev-utils": "*",
-    "@fem/eslint-config": "*",
+    "@frontendmonster/eslint-config": "^1.0.1",
     "@fem/webpack-utils": "*",
     "@storybook/addon-actions": "^4.0.0-alpha.22",
     "@storybook/addon-knobs": "^4.0.0-alpha.22",
