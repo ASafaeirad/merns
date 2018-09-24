@@ -848,6 +848,10 @@
   dependencies:
     bcryptjs "^2.4.3"
 
+"@frontendmonster/steps@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@frontendmonster/steps/-/steps-1.0.0.tgz#a1256c046d3c08ed6b309dae46c18b1e8cc8242e"
+
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-1.0.2.tgz#1e6fe5d8027b1f285dc0d31762f566bccd73d5a9"
@@ -7576,7 +7580,7 @@ jest-worker@^23.2.0:
   dependencies:
     merge-stream "^1.0.1"
 
-jest@23.6.0, jest@^23.6.0:
+jest@^23.6.0:
   version "23.6.0"
   resolved "https://registry.yarnpkg.com/jest/-/jest-23.6.0.tgz#ad5835e923ebf6e19e7a1d7529a432edfee7813d"
   dependencies:

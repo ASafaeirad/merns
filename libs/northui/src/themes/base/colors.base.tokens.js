@@ -1,5 +1,5 @@
 /* eslint-disable key-spacing */
-import steps from '@fem/steps';
+import steps from '@frontendmonster/steps';
 import color from 'tinycolor2';
 
 const palette = {
@@ -42,6 +42,14 @@ const palette = {
   lightYellow: '#FAF4D1',
   lightPurple: '#b7c1ff',
   lightNavy:   '#7c92a7',
+
+  $swatch_1: '#fbfbfc',
+  $swatch_2: '#2a3c50',
+  $swatch_3: '#65a778',
+  $swatch_4: '#9acba4',
+  $swatch_5: '#65c47d',
+  $swatch_6: '#837465',
+  $swatch_7: '#363f47',
 
   // Dark Colors
   darkBlue:   '#405b8e',

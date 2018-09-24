@@ -17,7 +17,7 @@
     "storybook:build": "build-storybook"
   },
   "dependencies": {
-    "@fem/steps": "*",
+    "@frontendmonster/steps": "^1.0.0",
     "@fem/style-utils": "*",
     "@rebass/components": "^4.0.0-1",
     "@rebass/grid": "^6.0.0-3",
