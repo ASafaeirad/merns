@@ -1,5 +1,5 @@
 import faker from 'faker';
-import { fakeNTimes } from '@fem/test-utils';
+import { generateNTimes } from '@frontendmonster/test-utils';
 import * as models from './models';
 import { MongooseClient } from './mongoose';
 import { RedisClient } from './redis';
@@ -29,5 +29,5 @@ export const seedDB = async ({ flush = true } = {}) => {
   }
 
   await generateFakeUser(strictUser);
-  await fakeNTimes([10, 15], generateFakeUser);
+  await generateNTimes([10, 15], generateFakeUser);
 };
