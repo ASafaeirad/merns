@@ -1,7 +1,7 @@
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const webpack = require('webpack');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const webpackUtils = require('@fem/webpack-utils');
+const { generateWebpackRules } = require('@frontendmonster/dev-utils/webpack');
 const path = require('path');
 
 const config = {
@@ -21,7 +21,7 @@ const config = {
   },
   module: {
     rules: [
-      ...webpackUtils.generateWebpackRules(
+      ...generateWebpackRules(
         {
           babel: true,
           graphql: true,

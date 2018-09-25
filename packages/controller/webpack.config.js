@@ -1,6 +1,5 @@
 const path = require('path');
-const webpackUtils = require('@fem/webpack-utils');
-const env = require('@frontendmonster/dev-utils/env');
+const { env, generateWebpackRules } = require('@frontendmonster/dev-utils');
 
 const libName = 'controller';
 
@@ -29,7 +28,7 @@ const config = {
   },
   module: {
     rules: [
-      ...webpackUtils.generateWebpackRules(
+      ...generateWebpackRules(
         {
           graphql: true,
           babel: true,

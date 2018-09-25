@@ -1,6 +1,5 @@
 const path = require('path');
-const webpackUtils = require('@fem/webpack-utils');
-const env = require('@frontendmonster/dev-utils/env');
+const { env, generateWebpackRules } = require('@frontendmonster/dev-utils');
 const nodeExternals = require('webpack-node-externals');
 
 const libName = 'northui';
@@ -28,7 +27,7 @@ const config = {
   },
   module: {
     rules: [
-      ...webpackUtils.generateWebpackRules(
+      ...generateWebpackRules(
         {
           babel: true,
           mjs: true,
