@@ -23,7 +23,7 @@
   },
   "workspaces": [
     "packages/*",
-    "libs/*"
+    "standalone-packages/*"
   ],
   "devDependencies": {
     "@babel/core": "^7.0.0",
