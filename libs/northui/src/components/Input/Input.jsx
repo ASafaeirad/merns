@@ -2,7 +2,7 @@ import system from '@rebass/components';
 import { css, keyframes } from 'styled-components';
 import { themeGet } from 'styled-system';
 import { bool, string } from 'prop-types';
-import { placeholder } from '@fem/style-utils';
+import { placeholder } from '@frontendmonster/styled-utils';
 import { padding, margin } from '../../utils/styled-system.helper';
 
 const autofillFix = keyframes`

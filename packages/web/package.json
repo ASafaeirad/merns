@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@fem/northui": "*",
-    "@fem/style-utils": "*",
     "@merns/common": "*",
     "@merns/controller": "*",
     "graphql": "^14.0.2",

@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@frontendmonster/steps": "^1.0.0",
-    "@fem/style-utils": "*",
+    "@frontendmonster/styled-utils": "^1.0.0",
     "@rebass/components": "^4.0.0-1",
     "@rebass/grid": "^6.0.0-3",
     "emotion": "^9.2.9",
