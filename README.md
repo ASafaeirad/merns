@@ -1,7 +1,7 @@
 # MERNS
 
 <p align="center">
-  <p>Monorepo MERN boilerplate with yarn and lerna.</p>
+  <p>Monorepo MERN boilerplate with yarn workspace and lerna.</p>
   <a href="#">
     <img src="https://rawgithub.com/gilbarbara/logos/master/logos/javascript.svg" alt="ES6" height="80" style="margin: 10px;"/>
   </a>
@@ -34,7 +34,7 @@
   </a>
 </p>
 
-# Getting started
+## Getting started
 
 0. Clone this repo: run `$ git clone git@github.com:frontendmonster/merns.git`
 
